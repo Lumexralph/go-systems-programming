@@ -37,6 +37,7 @@ func setUpLogFile(filename string) error {
 
 func main() {
 	numberOfLogEntries := 0
+	ipAddress := ""
 	filename := "/tmp/myLog.log"
 	err := setUpLogFile(filename)
 	if err != nil {
@@ -45,7 +46,13 @@ func main() {
 	}
 
 	for {
-		log.Printf("%d: This is a test log entry \n", numberOfLogEntries)
+		if numberOfLogEntries%10 != 0 {
+			ipAddress = "127.0.0.1"
+		} else {
+			ipAddress = ""
+		}
+		log.Printf("%d: %s This is a test log entry  \n",
+			numberOfLogEntries, ipAddress)
 		numberOfLogEntries++
 		TOTALWRITES++
 
@@ -61,5 +68,5 @@ func main() {
 		time.Sleep(time.Second)
 	}
 
-	fmt.Printf("Wrote %d log entries! \n", TOTALWRITES)
+	fmt.Printf("Wrote %d log entries! %s\n", TOTALWRITES, ipAddress)
 }
