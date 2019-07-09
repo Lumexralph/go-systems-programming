@@ -17,8 +17,10 @@ func f1(cc chan chan int, finished chan struct{}) {
 			i = i + 1
 			i = i % len(numbers)
 			total = total + 1
-		case <-finished:
+		case zeroValue := <-finished:
 			c <- total
+			// when a channel is closed, the zero value is passed into the channel
+			fmt.Println("The value received when the channel is closed", zeroValue)
 			return
 		}
 	}
