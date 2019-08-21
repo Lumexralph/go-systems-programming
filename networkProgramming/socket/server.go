@@ -12,6 +12,7 @@ func echoServer(c net.Conn) {
 	for {
 
 		// get 1024 bytes from memory
+		// where to read the client data into memory
 		buf := make([]byte, 1024)
 
 		// read from the stream of bytes
@@ -27,7 +28,7 @@ func echoServer(c net.Conn) {
 		data := buf[0:nr]
 		fmt.Printf("-->: %v \n", string(data))
 
-		// write from the stream of bytes
+		// write from the stream of bytes to the client
 		_, err = c.Write(data)
 		if err != nil {
 			fmt.Println(err)
