@@ -66,10 +66,14 @@ Working on Unix Systems with Golang, studying Unix/Linux system and building clo
 - System Files
 - using IO
 
-## Network Programming
+## Network Programming and Web
 
 - Unix Socket Server
 - Unix Socket Client
+- Web Server and Router
+- Web Client
+- Template
+- Working with JSON
 
 
 ## Copyright

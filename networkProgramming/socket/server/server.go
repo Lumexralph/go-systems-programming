@@ -26,7 +26,7 @@ func echoServer(c net.Conn) {
 		// read the data from the beginning of the base
 		// addres towards the length of thr byte read
 		data := buf[0:nr]
-		fmt.Printf("-->: %v \n", string(data))
+		fmt.Printf("-->Server: %v \n", string(data))
 
 		// write from the stream of bytes to the client
 		_, err = c.Write(data)
