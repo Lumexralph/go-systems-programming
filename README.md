@@ -74,6 +74,7 @@ Working on Unix Systems with Golang, studying Unix/Linux system and building clo
 - Web Client
 - Template
 - Working with JSON
+- TCP Client and Server
 
 
 ## Copyright
