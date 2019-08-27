@@ -75,6 +75,9 @@ Working on Unix Systems with Golang, studying Unix/Linux system and building clo
 - Template
 - Working with JSON
 - TCP Client and Server
+- UDP Client and Server
+- Remote Procedure Call (RPC)
+- Concurrent TCP Server
 
 
 ## Copyright
